@@ -28,15 +28,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </div>
         <!-- Header Card-->
         <div class="grid grid-cols-3 gap-5 mx-5">
-            <div class="border-2 border-gray-500 rounded-3xl p-5">
+            <div id="total-count" class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Total</p>
                 <p>8</p>
             </div>
-            <div class="border-2 border-gray-500 rounded-3xl p-5">
+            <div id="ineterview-count" class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Interview</p>
                 <p>0</p>
             </div>
-            <div class="border-2 border-gray-500 rounded-3xl p-5">
+            <div id="rejected-count" class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Rejected</p>
                 <p>0</p>
             </div>
@@ -44,7 +44,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </header>
     
     <!--job feed section-->
-    <section class="w-11/12 mx-auto bg-gray-400">
+    <section id="job-feed" class="w-11/12 mx-auto bg-gray-400">
         <!--info container-->
             <div class="flex justify-between px-10">
                 <!--Right Part-->
@@ -59,15 +59,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 </div>
                 <!--Left Part-->
                 <div>
-                    <p>8 Jobs</p>
+                    <p><span id="job-count">8</span> Jobs</p>
                 </div>
             </div>
 
         <!---cards container-->
             <div class="mt-7 ">
                 <!--Card One-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2>Mobile First Corp</h2>
                     <h4>React Native Developer</h4>
                 </div>
@@ -83,13 +84,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Dwlete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Two-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2>WebFlow Agency</h2>
                     <h4>Web Designer & Developer</h4>
                 </div>
@@ -105,13 +113,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Delete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Three-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2>DataViz Solutions</h2>
                     <h4>Data Visualization Specialist</h4>
                 </div>
@@ -127,13 +142,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Delete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                   <!--Card Four-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2>CloudFirst Inc</h2>
                     <h4>Backend Developer</h4>
                 </div>
@@ -149,13 +171,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--DEelete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Five-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2>Innovation Labs</h2>
                     <h4>UI/UX Engineer</h4>
                 </div>
@@ -171,13 +200,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Delete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Six-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2> MegaCorp Solutions</h2>
                     <h4>JavaScript Developer</h4>
                 </div>
@@ -193,13 +229,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Delete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Seven-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2> StartupXYZ</h2>
                     <h4>Full Stack Engineer</h4>
                 </div>
@@ -215,13 +258,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <!--Delete Icon-->
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
                 <!--Card Eight-->
-                <div class="py-4">
+                <div class="job-card py-4 flex justify-between">
                     <div>
+                        <div>
                     <h2> TechCorp Industries</h2>
                     <h4>Senior Frontend Developer</h4>
                 </div>
@@ -237,11 +287,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
                 <div>
-                    <button>Interview</button>
-                    <button>Rejected</button>
+                    <button class="interview-bttn">Interview</button>
+                    <button class="rejected-bttn">Rejected</button>
                 </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    
                 </div>
             </div>
     </section>
+
+    <!--Interview Section-->
+    <section id="Interview-section" class="h-64 flex justify-center items-center">
+        <div class="flex flex-col items-center h-40 bg-gray-200">
+            <div class="bg-blue-400 p-6 rounded-xl">
+                <i class="fa-regular fa-file-lines text-white text-4xl"></i>
+            </div>
+            <div class="text-center">
+                <h4>No jobs available</h4>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+        </div>
+        
+    </section>
+    <!--Rejected Section-->
+    <section id="rejected-section" class="h-64 flex justify-center items-center">
+        <div class="flex flex-col items-center h-40 bg-gray-200">
+            <div class="bg-blue-400 p-6 rounded-xl">
+                <i class="fa-regular fa-file-lines text-white text-4xl"></i>
+            </div>
+            <div class="text-center">
+                <h4>No jobs available</h4>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+        </div>
+        
+    </section>
+    <script src="./script.js"></script>
 </body>
 </html>
