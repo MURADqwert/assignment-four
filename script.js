@@ -32,7 +32,7 @@ for(const bttn of interviewBttn){
         if(card.dataset.status==="rejected"){
             rejected--;
         }
-        card.dataset.status==="interview";
+        card.dataset.status="interview";
         ineterview++;
 
         interviewCount.innerText = ineterview;
@@ -53,10 +53,34 @@ for(const bttn of rejectionBttn){
         if(card.dataset.status==="interview"){
             ineterview--;
         }
-        card.dataset.status==="rejected";
+        card.dataset.status="rejected";
         rejected++;
 
         interviewCount.innerText = ineterview;
         rejectionCount.innerText = rejected;
     })
 }
+
+// top button
+
+const tapBttn = document.querySelectorAll('.tap-bttn');
+const jobCards = document.querySelectorAll('.job-card');
+
+ tapBttn.forEach(bttn => {
+
+    bttn.addEventListener('click',function(){
+        const filter = bttn.dataset.filter;
+
+        jobCards.forEach(card => {
+            const status = card.dataset.status;
+            if(filter==='all'|| filter===status){
+                card.style.display = 'block';
+            }
+            else{
+                card.style.display = 'none';
+            }
+            
+        });
+    })
+    
+});
