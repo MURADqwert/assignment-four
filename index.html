@@ -28,17 +28,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </div>
         <!-- Header Card-->
         <div class="grid grid-cols-3 gap-5 mx-5">
-            <div id="total-count" class="border-2 border-gray-500 rounded-3xl p-5">
+            <div class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Total</p>
-                <p>8</p>
+                <p id="total-count">8</p>
             </div>
-            <div id="ineterview-count" class="border-2 border-gray-500 rounded-3xl p-5">
+            <div  class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Interview</p>
-                <p>0</p>
+                <p id="interview-count">0</p>
             </div>
-            <div id="rejected-count" class="border-2 border-gray-500 rounded-3xl p-5">
+            <div class="border-2 border-gray-500 rounded-3xl p-5">
                 <p>Rejected</p>
-                <p>0</p>
+                <p id="rejected-count">0</p>
             </div>
         </div>
     </header>
@@ -52,7 +52,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <h3>Available Jobs</h3>
                     <!--Buttons-->
                     <div>
-                        <button class="tap-bttn  border-2 border-blue-700 rounded-2xl px-3 py-1" data-filter="all">All</button>
+                        <button class="tap-bttn bg-green-500 text-white  border-2 border-blue-700 rounded-2xl px-3 py-1" data-filter="all">All</button>
                         <button class="tap-bttn border-2 border-blue-700 rounded-2xl px-3 py-1" data-filter="interview">Interview</button>
                         <button class="tap-bttn border-2 border-blue-700 rounded-2xl px-3 py-1" data-filter="rejected">Rejected</button>
                     </div>
@@ -80,7 +80,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                    <h4 class="job-status">Not Applied</h4>
                     <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
                 <div>
@@ -109,7 +109,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                    <h4 class="job-status">Not Applied</h4>
                     <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div>
@@ -138,7 +138,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                    <h4 class="job-status">Not Applied</h4>
                     <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div>
@@ -167,7 +167,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                   <h4 class="job-status">Not Applied</h4>
                     <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                 <div>
@@ -196,7 +196,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                    <h4 class="job-status">Not Applied</h4>
                     <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                 <div>
@@ -225,7 +225,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                   <h4 class="job-status">Not Applied</h4>
                     <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 </div>
                 <div>
@@ -254,7 +254,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                   <h4 class="job-status">Not Applied</h4>
                     <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                 <div>
@@ -283,7 +283,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     </ul>
                 </div>
                 <div>
-                    <h4>Not Applied</h4>
+                    <h4 class="job-status">Not Applied</h4>
                     <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
                 <div>

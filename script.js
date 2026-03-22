@@ -1,86 +1,56 @@
 
-// iterview section,,
+// Interview Count
+const totalInterViewCount = document.getElementById("interview-count");
+// Initial Interview count
+let interviewCount = 0;
 
-//collecting all interview button
-const interviewBttn = document.querySelectorAll(".interview-bttn");
 
-// interview count
-const interviewCount = document.getElementById("ineterview-count");
-//initial iinterview count
-let ineterview = 0;
+// Collecting all interview click from the job sections
+const interviewBttns = document.querySelectorAll(".interview-bttn");
+for(const bttn of interviewBttns){
+    bttn.addEventListener("click", function(){
+        const jobCard = bttn.closest(".job-card");
+        const statusText = jobCard.querySelector(".job-status");
+        if(jobCard.dataset.status !=="interview"){
+            if(jobCard.dataset.status === "rejected"){
+                rejectedCount--;
+                totalRejectedCount.innerText = rejectedCount;
+            }
+            jobCard.dataset.status = "interview";
 
-// Rejected section,,
+            statusText.innerText = 'interview';
+            statusText.style.color = 'green';
+            interviewCount++;
 
-//collecting all rejection button
-const rejectionBttn = document.querySelectorAll(".rejected-bttn");
-
-// interview count
-const rejectionCount = document.getElementById("rejected-count");
-//initial iinterview count
-let rejected = 0;
-
-// Click on Interview 
-
-for(const bttn of interviewBttn){
-    bttn.addEventListener('click',function(){
-        const card = bttn.closest(".job-card");
-
-        //toogle
-        if(card.dataset.status==="interview"){
-            ineterview--;
+            totalInterViewCount.innerText = interviewCount;
         }
-        if(card.dataset.status==="rejected"){
-            rejected--;
-        }
-        card.dataset.status="interview";
-        ineterview++;
-
-        interviewCount.innerText = ineterview;
-        rejectionCount.innerText = rejected;
     })
 }
 
-// Click on Rejected 
+// Rejected Count
+const totalRejectedCount = document.getElementById("rejected-count");
+// Initial Count
+let rejectedCount = 0;
 
-for(const bttn of rejectionBttn){
-    bttn.addEventListener('click',function(){
-        const card = bttn.closest(".job-card");
+// Collecting all rejected Clicked 
+const rejectedBttns = document.querySelectorAll(".rejected-bttn");
 
-        //toogle
-        if(card.dataset.status==="rejected"){
-            rejected--;
+for(const bttn of rejectedBttns){
+    bttn.addEventListener("click",function(){
+        const jobCard = bttn.closest(".job-card");
+        const statusText = jobCard.querySelector(".job-status");
+
+        if(jobCard.dataset.status !== "rejected"){
+            if(jobCard.dataset.status == "interview"){
+                interviewCount--;
+                totalInterViewCount.innerText = interviewCount;
+            }
+            jobCard.dataset.status = "rejected";
+            rejectedCount++;
+            totalRejectedCount.innerText = rejectedCount;
+
+            statusText.innerText = "Rejected";
+            statusText.style.color = "red";
         }
-        if(card.dataset.status==="interview"){
-            ineterview--;
-        }
-        card.dataset.status="rejected";
-        rejected++;
-
-        interviewCount.innerText = ineterview;
-        rejectionCount.innerText = rejected;
     })
 }
-
-// top button
-
-const tapBttn = document.querySelectorAll('.tap-bttn');
-const jobCards = document.querySelectorAll('.job-card');
-
- tapBttn.forEach(bttn => {
-
-    bttn.addEventListener('click',function(){
-        const filter = bttn.dataset.filter;
-
-        jobCards.forEach(card => {
-            const status = card.dataset.status;
-            if(filter==='all'|| filter===status){
-                card.style.display = 'block';
-            }
-            else{
-                card.style.display = 'none';
-            }
-            
-        });
-    })
-    
-});
