@@ -60,6 +60,7 @@ for(const bttn of rejectedBttns){
 }
 
 const jobCards = document.querySelectorAll(".job-card");
+const totalJobCount = jobCards.length;
 const tapBttn = document.querySelectorAll(".tap-bttn");
 
 const noneInterview = document.getElementById("no-interview");
@@ -76,11 +77,14 @@ for(const bttn of tapBttn){
 
         let interviewJobs = 0;
         let rejectedJobs = 0;
+        let seclectedJobCount = 0;
+
 
         jobCards.forEach(card => {
             const status = card.dataset.status;
             if(filter === "all" || filter === status){
                 card.style.display = "flex";
+                seclectedJobCount++; 
             }
             else{
                  card.style.display = "none";
@@ -94,6 +98,8 @@ for(const bttn of tapBttn){
             }
            
         });
+        
+        document.getElementById("job-count").innerText = `${seclectedJobCount} of ${totalJobCount} Jobs`;
 
         if(interviewJobs === 0){
             noneInterview.style.display ="flex";
@@ -110,3 +116,24 @@ for(const bttn of tapBttn){
         }
     })
 }
+
+const deleteIcon = document.querySelectorAll(".delete-icon");
+deleteIcon.forEach(icon => {
+
+    icon.addEventListener("click",function(){
+        const jobCard = this.closest(".job-card");
+
+        if(jobCard.dataset.status === "interview"){
+            interviewCount--;
+            totalInterViewCount.innerText = interviewCount;
+        }
+        if(jobCard.dataset.status === "rejected"){
+            rejectedCount--;
+            totalRejectedCount.innerText = rejectedCount;
+        }
+        jobCard.remove();
+
+        document.querySelector(".tap-bttn.bg-green-500").click();
+    })
+    
+});
