@@ -1,9 +1,10 @@
 
-// Interview Count
+// Interview Section
 const totalInterViewCount = document.getElementById("interview-count");
 // Initial Interview count
 let interviewCount = 0;
-// Rejected Count
+
+// Rejected Section
 const totalRejectedCount = document.getElementById("rejected-count");
 // Initial Count
 let rejectedCount = 0;
@@ -58,9 +59,9 @@ for(const bttn of rejectedBttns){
         }
     })
 }
+// Jobs Filter Section.
 
-const jobCards = document.querySelectorAll(".job-card");
-const totalJobCount = jobCards.length;
+//const jobCards = document.querySelectorAll(".job-card");
 const tapBttn = document.querySelectorAll(".tap-bttn");
 
 const noneInterview = document.getElementById("no-interview");
@@ -80,40 +81,63 @@ for(const bttn of tapBttn){
         let seclectedJobCount = 0;
 
 
-        jobCards.forEach(card => {
+        document.querySelectorAll(".job-card").forEach(card => {
             const status = card.dataset.status;
+            if(status === "interview"){
+                interviewJobs++;
+            }
+            if(status === "rejected"){
+                rejectedJobs++;
+            }
             if(filter === "all" || filter === status){
                 card.style.display = "flex";
                 seclectedJobCount++; 
             }
             else{
-                 card.style.display = "none";
+                card.style.display = "none";
             }
 
-            if(status === "interview"){
-                interviewJobs++;
-            }
-            if(status === "rejected"){
-                rejectedJobs ++
-            }
+           
            
         });
         
+        const totalJobCount = document.querySelectorAll(".job-card").length;
         document.getElementById("job-count").innerText = `${seclectedJobCount} of ${totalJobCount} Jobs`;
 
-        if(interviewJobs === 0){
-            noneInterview.style.display ="flex";
-        }
-        else{
-            noneInterview.style.display = "none";
-        }
+        const interviewSection = document.getElementById("interview-section");
+        const rejectedSection = document.getElementById("rejected-section");
+        const cardsContainer = document.getElementById("cards-container");
 
-        if(rejectedJobs === 0){
-            noneRejected.style.display = "flex";
+        if(filter === "interview"){
+            if(interviewJobs === 0){
+                interviewSection.style.display = "block";
+                rejectedSection.style.display = "none";
+                cardsContainer.style.display = "none";
+            }
+            else{
+               interviewSection.style.display = "none";
+                rejectedSection.style.display = "none";
+                cardsContainer.style.display = "block";
+            }
         }
-        else{
-            noneRejected.style.display = "none";
+        if (filter === "rejected"){
+            if(rejectedJobs === 0){
+                interviewSection.style.display = "none";
+                rejectedSection.style.display = "block";
+                cardsContainer.style.display = "none";
+            }
+            else{
+                interviewSection.style.display = "none";
+                rejectedSection.style.display = "none";
+                cardsContainer.style.display = "block";
+            }
         }
+        if(filter === "all"){
+                interviewSection.style.display = "none";
+                rejectedSection.style.display = "none";
+                cardsContainer.style.display = "block";
+        }
+        
     })
 }
 
